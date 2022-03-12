@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Informasi</title>
+    </head>
+    <body bgcolor="#696969">
+        <script>
+            let judul = ['Lokasi Gempa', 'Skala', 'Dampak',];
+        </script>
+         <h1 align="center">Informasi Gempa</h1>
+         <table border="1" align="center" cellpadding="8" cellspacing="0" width="60%">
+             <thead>
+                 <tr bgcolor="#DCDCDC">
+                     <script>
+                         for (const jdl of judul) {
+                             document.write(`<th>${jdl}</th>`);
+                         }
+                     </script>
+                 </tr>
+                 <tbody align="center">
+                        <script>
+                        class gempa {
+                            constructor(lokasi, skala) {
+                                this.lokasi = lokasi;
+                                this.skala = skala;
+                                
+                            }
+                    
+                            dampak(akibat) {
+                                if (this.skala > 0 && this.skala <= 2) {
+                                    akibat= "Tidak terasa"
+                    
+                                    document.write(`<tr>
+                                        <td>${this.lokasi}</td>
+                                        <td>${this.skala}</td>
+                                        <td>${akibat} </td></tr>`);
+
+                                } else if (this.skala > 2 && this.skala <= 4) {
+                                    akibat = "Bangunan retak-retak"
+                    
+                                    document.write(`<tr>
+                                        <td>${this.lokasi}</td>
+                                        <td>${this.skala}</td>
+                                        <td>${akibat} </td></tr>`);
+
+                                } else if (this.skala > 4 && this.skala <= 6) {
+                                    akibat = "Bangunan roboh"
+                    
+                                    document.write(`<tr>
+                                        <td>${this.lokasi}</td>
+                                        <td>${this.skala}</td>
+                                        <td>${akibat} </td></tr>`);
+
+                                } else if(this.skala > 6){
+                                    akibat = "Berpotensi tsunami"
+                    
+                                    document.write(`<tr>
+                                        <td>${this.lokasi}</td>
+                                        <td>${this.skala}</td>
+                                        <td>${akibat} </td></tr>`);
+                                    
+                                }else{
+                                    document.write(`tidak ada gempa`);
+            }
+                                }
+                            }
+                        
+                    
+                    
+                        let g1 = new gempa("Palu", 5);
+                            g1.dampak();
+                        let g2 = new gempa("Manado", 5);
+                            g2.dampak();
+                        let g3 = new gempa("Papua", 5);
+                            g3.dampak();
+                        let g4 = new gempa("Bali", 5);
+                            g4.dampak();
+                        let g5 = new gempa("Pangandaran", 4);
+                            g5.dampak();
+                        let g6 = new gempa("Kalimantan", 6);
+                            g6.dampak();
+                        let g7 = new gempa("Lombok", 6);
+                            g7.dampak();
+                        let g8 = new gempa("Jogja", 9);
+                            g8.dampak();
+                        let g9 = new gempa("Aceh", 9);
+                            g9.dampak();
+                        let g10 = new gempa1("Medan", 9);
+                            g10.dampak();
+                    
+                    </script>
+    </body>
+</html>
